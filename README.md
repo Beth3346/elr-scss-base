@@ -1,6 +1,6 @@
 # elr-scss-base
 
-[![Build Status](https://travis-ci.org/Beth3346/elr-scss-base.svg?branch=master)](https://travis-ci.org/Beth3346/elr-scss-base)
+[![Build Status](https://travis-ci.com/Beth3346/elr-scss-base.svg?branch=master)](https://travis-ci.com/Beth3346/elr-scss-base)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-base.svg?style=flat)]()
 
