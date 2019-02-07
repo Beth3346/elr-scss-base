@@ -1,2 +1,267 @@
-@import '~elr-scss-functions/main';
-@import 'base';
+@import 'node_modules/elr-scss-functions/main';
+
+// applies base styles to elements
+@mixin elr-base($config: ()) {
+  $config: extend(
+    (
+      link-color: #1976d2,
+      text-color: #333
+    ),
+    $config
+  );
+
+  $link-color: map-get($config, link-color);
+  $text-color: map-get($config, text-color);
+
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+    padding-left: 30px;
+  }
+
+  li,
+  dd,
+  dt {
+    margin: 0;
+    padding: 5px 0;
+    color: $text-color;
+  }
+
+  // li {
+  //     margin-left: 30px;
+  // }
+
+  dl {
+    padding: 0;
+    margin: 0;
+  }
+
+  dt {
+    font-weight: 700;
+    padding-bottom: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 0;
+    font-weight: 500;
+    line-height: 1.2;
+    color: $text-color;
+  }
+
+  h1,
+  .h1 {
+    font-size: 36px;
+
+    @media (max-width: 1024px) {
+      font-size: 36px - 8;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 36px - 16;
+    }
+
+    @media (max-width: 568px) {
+      font-size: 36px - 18;
+    }
+  }
+
+  h2,
+  .h2 {
+    font-size: 30px;
+
+    @media (max-width: 1024px) {
+      font-size: 30px - 5;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 30px - 10;
+    }
+
+    @media (max-width: 568px) {
+      font-size: 30px - 15;
+    }
+  }
+
+  h3,
+  .h3 {
+    font-size: 24px;
+
+    @media (max-width: 1024px) {
+      font-size: 24px - 4;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 24px - 8;
+    }
+
+    @media (max-width: 568px) {
+      font-size: 24px - 12;
+    }
+  }
+
+  h4,
+  .h4 {
+    font-size: 18px;
+
+    @media (max-width: 1024px) {
+      font-size: 18px - 4;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 18px - 6;
+    }
+
+    @media (max-width: 568px) {
+      font-size: 18px - 8;
+    }
+  }
+
+  h5,
+  .h5 {
+    font-size: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 16px - 2;
+    }
+
+    @media (max-width: 568px) {
+      font-size: 16px - 4;
+    }
+  }
+
+  h6,
+  .h6 {
+    font-size: 14px;
+
+    @media (max-width: 768px) {
+      font-size: 14px - 2;
+    }
+
+    @media (max-width: 568px) {
+      font-size: 14px - 4;
+    }
+  }
+
+  mark {
+    background-color: $link-color;
+    color: #fff;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 10px;
+    color: $text-color;
+
+    @media (max-width: 568px) {
+      font-size: 16px - 2;
+    }
+  }
+
+  small {
+    font-size: 16px - 4;
+    color: $text-color;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 10px;
+    font-style: italic;
+    color: $text-color;
+  }
+
+  cite {
+    font-style: normal;
+    color: $text-color;
+    display: block;
+  }
+
+  pre {
+    display: block;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #e2e2e2;
+    color: $text-color;
+    width: 80%;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    @media (max-width: 568px) {
+      width: 100%;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: $link-color;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  input,
+  select,
+  textarea,
+  fieldset {
+    // font-family: $font-family;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $text-color;
+  }
+
+  label {
+    vertical-align: middle;
+  }
+
+  input[type='text'],
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='email'],
+  input[type='month'],
+  input[type='number'],
+  input[type='password'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='time'],
+  input[type='url'],
+  input[type='week'] {
+    height: 30px;
+    padding: 10px;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+  }
+
+  select,
+  textarea {
+    line-height: 1.75;
+    padding: 10px;
+  }
+
+  select:not([multiple]) {
+    height: 30px;
+    vertical-align: middle;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
