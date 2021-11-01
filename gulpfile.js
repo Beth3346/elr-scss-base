@@ -27,7 +27,7 @@ function copyImages() {
     .pipe(gulp.dest(paths.images));
 }
 
-function processStyles(done) {
+function processStyles() {
   return gulp
     .src(["public/*.scss"])
     .pipe(plumber())
@@ -52,7 +52,7 @@ function processStyles(done) {
 gulp.task("default", done => {
   copyImages();
   copyHtml();
-  const styles = processStyles(done);
+  processStyles();
   // console.log({ styles });
   done();
 });
