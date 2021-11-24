@@ -3,7 +3,7 @@
 a scss mixin for base styles
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![npm](https://img.shields.io/npm/dm/elr-scss-base.svg?style=flat)]()
+[![npm](https://img.shields.io/npm/dm/elr-scss-base.svg?style=flat)](https://npmjs.com/package/elr-scss-base)
 
 ## Installation
 
@@ -16,6 +16,10 @@ command line tools.
 
 ```sh
 npm install elr-scss-base --save
+```
+
+```scss
+@include elr-base;
 ```
 
 ## License
