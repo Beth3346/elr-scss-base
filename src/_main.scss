@@ -216,4 +216,40 @@
   button {
     cursor: pointer;
   }
+
+  dl {
+    div {
+      margin: $base-fontsize 0;
+    }
+
+    dt,
+    dd {
+      margin: ($base-fontsize * 0.25) 0;
+      padding: 0;
+    }
+
+    dt {
+      color: $text-color;
+    }
+
+    dd {
+      color: lighten($text-color, 0.7);
+      font-size: $base-fontsize * 0.875;
+    }
+
+    &.dl-inline {
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      dt {
+        margin-right: $base-fontsize * 0.5;
+      }
+
+      dd {
+        margin-left: $base-fontsize * 0.5;
+      }
+    }
+  }
 }
