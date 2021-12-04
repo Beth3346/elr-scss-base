@@ -101,6 +101,7 @@
     margin: 0;
     padding: 0 0 $base-font * 0.75;
     color: $text-color;
+    line-height: $line-height;
 
     @media (max-width: $mobile-width) {
       font-size: $base-font - 2;
