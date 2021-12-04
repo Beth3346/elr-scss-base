@@ -1,7 +1,7 @@
 {
   "name": "elr-scss-base",
   "description": "a scss mixin for base styles",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "Elizabeth Rogers",
   "bugs": {
     "url": "https://github.com/Beth3346/elr-scss-base/issues"
