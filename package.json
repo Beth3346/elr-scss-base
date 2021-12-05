@@ -11,8 +11,8 @@
     "serve": "parcel serve src/index.html",
     "prepare": "husky install",
     "test": "npm run build",
-    "update": "ncu",
-    "update:install": "ncu -u && npm install",
+    "ncu": "ncu",
+    "ncu:install": "ncu -u && npm install",
     "np": "np"
   },
   "devDependencies": {
