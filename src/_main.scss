@@ -126,6 +126,11 @@
     display: block;
   }
 
+  code,
+  pre {
+    font-family: $mono-font;
+  }
+
   pre {
     display: block;
     padding: $base-font * 0.75;
@@ -152,15 +157,6 @@
     &:focus {
       text-decoration: none;
     }
-  }
-
-  hr {
-    display: block;
-    height: 1px;
-    border: $border;
-    margin: 1em 0;
-    padding: 0;
-    width: 100%;
   }
 
   input,
@@ -192,7 +188,6 @@
   input[type="time"],
   input[type="url"],
   input[type="week"] {
-    // height: 30px;
     padding: $base-font * 0.75;
     -webkit-appearance: none;
     -ms-appearance: none;
@@ -206,16 +201,32 @@
 
   textarea {
     padding: $base-font * 0.75;
+    display: block;
   }
 
   select:not([multiple]) {
     // height: 30px;
     vertical-align: middle;
     padding: 0 $base-font * 0.75;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
   }
 
   button {
     cursor: pointer;
+    border: 1px solid $link-color;
+    background-color: $link-color;
+    color: $white;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: $border-radius;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+    }
   }
 
   dl {
@@ -250,6 +261,10 @@
 
       dd {
         margin-left: $base-fontsize * 0.5;
+
+        p:first-child:last-child {
+          padding-bottom: 0;
+        }
       }
     }
   }
