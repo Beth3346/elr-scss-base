@@ -1,7 +1,9 @@
-# elr-scss-base
+# Base Styles
 
 a scss mixin for base styles
 
+[![npm version](http://img.shields.io/npm/v/elr-scss-base.svg)](https://www.npmjs.org/package/elr-scss-base)
+[![Build Status](https://github.com/elr-scss-base/workflows/CI/badge.svg)](https://github.com/elr-scss-base/actions?workflow=CI)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-base.svg?style=flat)](https://npmjs.com/package/elr-scss-base)
 
@@ -15,7 +17,13 @@ or
 command line tools.
 
 ```sh
-npm install elr-scss-base --save
+npm install elr-scss-base
+```
+
+or
+
+```sh
+yarn add elr-scss-base
 ```
 
 ```scss
